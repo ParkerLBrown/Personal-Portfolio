@@ -1,0 +1,109 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-image: url(imgs/earth_from_space_horizon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navigation{
+  background-color: whitesmoke;
+  opacity: 0.8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.profileHolder{
+  width: 100px;
+}
+
+.profilepic{
+  border-radius: 100px;
+}
+
+.navigation ul{
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+ul li a{
+  text-decoration: none;
+  font-size: larger;
+  font-weight: 500;
+  color: #30322F;
+}
+
+.sociallinks{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.body{
+  margin: 150px;
+}
+
+.home{
+}
+
+  .home h1{
+    margin: auto;
+    text-align: center;
+    color: whitesmoke;
+    opacity: .8;
+    margin-bottom: 150px;
+    font-size: 100px;
+    background-color: #30322F;
+    width: 60%;
+    padding: 10px;
+  }
+
+.banner{
+  width: 550px;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  color: #30322F;
+}
+
+  .banner h3{
+    font-size: 45px;
+  }
+
+.about, .projects, .education, .contact, .contact {
+  background: rgba(245, 245, 245, 0.8);
+  padding: 25px;
+}
+
+  .about h1, .projects h1, .education h1, .contact h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+  }
+
+    .about h3 {
+      margin-bottom: 5px;
+      font-size: 25px;
+      text-decoration: underline;
+    }
+
+      .about p {
+        margin-bottom: 10px;
+      }
+
+    .coverStatement {
+      font-size: 20px;
+    }

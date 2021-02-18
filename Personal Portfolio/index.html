@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parker Brown Portfolio</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="navigation">
+          <div class="profileHolder">
+            <img class="profilepic" src="imgs\profilepic1.jpeg" alt="An image" width="75px">
+        </div>
+          <ul>
+            <li><a class = "homeButton" href="#">Home</a></li>
+            <li><a class = "aboutButton" href="#">About Me</a></li>
+            <li><a class = "projectsButton" href="#">Projects</a></li>
+            <li><a class = "educationButton" href="#">Education/Experiance</a></li>
+            <li><a class = "contactButton" href="#">Contact/Resume</a></li>
+          </ul>
+          <div class="sociallinks">
+            <a href="https://www.linkedin.com/in/parkerbrown92/" target="blank">
+              <img src="imgs\linkedin_logo.png" alt="linkedin image" width="40px">
+            </a>
+            <a href="https://github.com/ParkerLBrown" target="_blank">
+              <img src="imgs\github_logo.png" alt="github image" width="40px">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="body">
+        <div class="home">
+          <h1>Parker Brown</h1>
+          <div class="banner">
+            <h3 id="slide"></h3>
+          </div>
+        </div>
+        <div class ="about">
+          <h1>About Me</h1>
+            <p class="coverStatement">I am a young software developer, passionate about creating sleek, impactful, beautiful looking applications while insuring they are user-friendly and innovative in use and design. I have a real skill for problem and puzzle solving. I am a very fast learner and and enjoy the reward of seeing my problem solving skills bring an impactful end product to life.</p>
+          <h3>Personal Life</h3>
+            <p></p>
+          <h3>Volenteer Work</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, facere! Ducimus recusandae autem minima esse dolorem! Eveniet, ab! Fugit sit dolor a saepe alias quia architecto incidunt tempora, illum rerum.</p>
+          <h3>Hobbies</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis commodi, consequatur voluptatum ducimus nemo expedita! Aliquid impedit laboriosam quibusdam quidem, animi amet, quos atque quod adipisci consequatur cupiditate veritatis!</p>
+        </div>
+        <div class="projects">
+          <h1>Projects</h1>
+            <div class="project">
+              <h2></h2>
+            </div>
+          <div>
+
+          </div>
+        </div>
+        <div class="education">
+          <h1>Education</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis pariatur fugit soluta, dolore quo nesciunt amet suscipit rem modi dignissimos nam inventore voluptatibus, labore neque consectetur, voluptate veniam iste?</p>
+        </div>
+        <div class="contact">
+          <h1>Contact</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa assumenda obcaecati libero voluptates laborum, consectetur adipisci perspiciatis delectus explicabo sunt beatae, corporis magni nam nobis qui! Repudiandae tempora consectetur vel.</p>
+        </div>
+      </div>
+  </div>
+  
+  <script>
+    var i = 0;
+    var adjectives = [];
+    var time = 3000;
+
+    adjectives[0] = "I N N O V A T I V E";
+    adjectives[1] = "K N O W L E G A B L E";
+    adjectives[1] = "T E C H N O L O G I C A L";
+    adjectives[2] = "P A S S I O N A T E";
+    adjectives[3] = "A D A P T A B L E";
+    adjectives[4] = "A M B I T I O U S";
+    adjectives[5] = "D E T A I L E D";
+    adjectives[6] = "D R I V E N";
+    adjectives[7] = "S K I L L E D";
+    adjectives[8] = "A R T I C U L A T E";
+    adjectives[9] = "C L E V E R";
+    adjectives[10] = "D I L I G E N T";
+    adjectives[11] = "E D U C A T E D";
+    adjectives[12] = "H O N E S T";
+    adjectives[13] = "I M A G I N A T I V E";
+    adjectives[14] = "R E S O U R C E F U L";
+    // console.log(adjectives);
+
+    function changeWord() {
+      document.getElementById("slide").innerHTML = adjectives[i];
+
+      if(i < adjectives.length-1) {
+        i++;
+      }
+      else {
+        i = 0;
+      }
+
+      setTimeout("changeWord()", time)
+    }
+
+    $(".about, .projects, .education, .contact").hide();
+
+    $(".homeButton").click(function(){
+      $(".about, .projects, .education, .contact").hide();
+      $(".home").show();
+    });
+
+    $(".aboutButton").click(function(){
+      $(".home, .projects, .education, .contact").hide();
+      $(".about").slideDown(1000);
+    });
+
+    $(".projectsButton").click(function(){
+      $(".home, .about, .education, .contact").hide();
+      $(".projects").slideDown(1000);
+    });
+
+    $(".educationButton").click(function(){
+      $(".home, .about, .projects, .contact").hide();
+      $(".education").slideDown(1000);
+    });
+    
+    $(".contactButton").click(function(){
+      $(".home, .about, .projects, .education").hide();
+      $(".education").slideDown(1000);
+    });
+
+    window.onload = changeWord;
+
+  </script>
+</body>
+</html>
